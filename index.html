@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Typer // Vintage Matrix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="terminal-setup">
+        <div class="game-container">
+            <div class="rhythm-highway">
+                
+                <div id="main-menu" class="menu-container">
+                    <h1 class="menu-title">MATRIX TERMINAL</h1>
+                    <p class="menu-subtitle">SELECT BOOT SECTOR:</p>
+                    <div class="menu-options">
+                        <button class="menu-btn" id="btn-endless">ENDLESS MODE</button>
+                        <button class="menu-btn" id="btn-levels">LEVEL CAMPAIGN</button>
+                    </div>
+                </div>
+
+                <div id="level-select" class="menu-container hidden">
+                    <h1 class="menu-title">SELECT SECTOR</h1>
+                    <div class="level-grid">
+                        <button class="lvl-btn" data-level="1">L1</button>
+                        <button class="lvl-btn" data-level="2">L2</button>
+                        <button class="lvl-btn" data-level="3">L3</button>
+                        <button class="lvl-btn" data-level="4">L4</button>
+                        <button class="lvl-btn" data-level="5">L5</button>
+                    </div>
+                    <button class="menu-btn secondary-btn" id="btn-back-to-main">RETURN</button>
+                </div>
+
+                <div id="game-screen" class="hidden" style="width: 100%; height: 100%; display: flex; flex-direction: column;">
+                    <div class="stats">
+                        <div id="mode-indicator">MODE: ENDLESS</div>
+                        <div>SCORE: <span id="score">0</span></div>
+                        <div>TIME: <span id="time">10</span>s</div>
+                    </div>
+
+                    <div class="game-window-box">
+                        <h1 id="word-display">initializing...</h1>
+                        <input type="text" id="word-input" placeholder="Type here..." autocomplete="off">
+                    </div>
+                </div>
+                
+                <div id="game-over" class="hidden">
+                    <h2 id="game-over-title">SYSTEM LOCKED</h2>
+                    <p id="game-over-sub">Connection traced.</p>
+                    <div class="end-options">
+                        <button id="restart-btn">Retry Hack</button>
+                        <button id="btn-to-lvl-select" class="secondary-btn">Level Selection</button>
+                        <button id="menu-btn-abort" class="secondary-btn">Abort to Menu</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="keyboard" id="virtual-keyboard">
+            <div class="key-row">
+                <button class="key">Q</button><button class="key">W</button><button class="key">E</button><button class="key">R</button><button class="key">T</button><button class="key">Y</button><button class="key">U</button><button class="key">I</button><button class="key">O</button><button class="key">P</button>
+            </div>
+            <div class="key-row">
+                <button class="key">A</button><button class="key">S</button><button class="key">D</button><button class="key">F</button><button class="key">G</button><button class="key">H</button><button class="key">J</button><button class="key">K</button><button class="key">L</button>
+            </div>
+            <div class="key-row">
+                <button class="key">Z</button><button class="key">X</button><button class="key">C</button><button class="key">V</button><button class="key">B</button><button class="key">N</button><button class="key">M</button>
+            </div>
+            <div class="key-row">
+                <button class="key symbol">(</button><button class="key symbol">)</button>
+                <button class="key space-bar">SPACE</button>
+                <button class="key symbol">.</button>
+                <button class="key backspace">⌫</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
